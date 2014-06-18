@@ -9,8 +9,9 @@ use Test::More;
     my $app = Kelp->new();
     can_ok $app, $_ for qw/json/;
     is ref $app->json, 'JSON::XS';
+    ok $app->json->get_utf8, "utf8 turned on";
 
-    my $json = { a => 'утф8' };
+    my $json = { a => 'text' };
     $app->add_route(
         '/json',
         sub {

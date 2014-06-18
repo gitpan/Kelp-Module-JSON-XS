@@ -3,7 +3,7 @@ use Kelp::Base 'Kelp::Module';
 use JSON::XS;
 use Carp;
 
-our $VERSION = 0.501;
+our $VERSION = 0.502;
 
 sub build {
     my ( $self, %args ) = @_;
@@ -27,6 +27,12 @@ __END__
 =head1 NAME
 
 Kelp::Module::JSON::XS - JSON:XS module for Kelp applications
+
+=head1 DEPRECATED
+
+*** This module is now deprecated. ***
+Beginning with version 2.0 of the JSON module, when both JSON and
+JSON::XS are installed, then JSON will fall back on JSON::XS
 
 =head1 SYNOPSIS
 
